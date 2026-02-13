@@ -11,13 +11,13 @@ export default function Contact() {
         </p>
         <div className="flex flex-wrap gap-6">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:johnkipruto157@gmail.com"
             className="px-6 py-3 rounded-lg bg-accent/10 text-accent border border-accent/30 hover:bg-accent/20 transition-colors"
           >
-            hello@example.com
+            johnkipruto157@gmail.com
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/John-Kipruto"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg bg-accent/10 text-accent border border-accent/30 hover:bg-accent/20 transition-colors"
@@ -25,7 +25,7 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/john-kipruto-81005121b/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg bg-accent/10 text-accent border border-accent/30 hover:bg-accent/20 transition-colors"
@@ -35,5 +35,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
