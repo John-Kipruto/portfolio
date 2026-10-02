@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #10191b;
+  --color-muted: #596163;
+  --color-paper: #f8f9f6;
+  --color-line: #d9ded7;
+  --color-lime: #ceee84;
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 28px;
+  }
+  body {
+    @apply m-0 bg-paper font-sans text-base leading-[1.6] text-ink;
+  }
+  button {
+    @apply cursor-pointer;
+    font: inherit;
+  }
+  a {
+    @apply text-inherit no-underline;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #49762c;
+    outline-offset: 5px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading font-semibold tracking-[-2px] leading-[1.12];
+  }
+  p {
+    margin-block: 1em;
+  }
+  dialog::backdrop {
+    background: #0e191bc9;
+    backdrop-filter: blur(4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
