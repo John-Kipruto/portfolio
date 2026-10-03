@@ -3,7 +3,15 @@
 import Modal from "./Modal";
 import { caseStudies } from "@/data/portfolio";
 
-export default function CaseStudyDialog({ projectId, onClose }) {
+interface CaseStudyDialogProps {
+  projectId: keyof typeof caseStudies;
+  onClose: () => void;
+}
+
+export default function CaseStudyDialog({
+  projectId,
+  onClose,
+}: CaseStudyDialogProps) {
   const project = caseStudies[projectId];
   return (
     <Modal

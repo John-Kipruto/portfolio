@@ -1,6 +1,14 @@
 import CompliancePreview from "./CompliancePreview";
 
-export default function FeaturedProject({ onCaseStudy }) {
+interface FeaturedProjectProps {
+  onCaseStudy: any;
+  onOpenDemo?: any;
+}
+
+export default function FeaturedProject({
+  onCaseStudy,
+  onOpenDemo,
+}: FeaturedProjectProps) {
   return (
     <article className="grid [grid-template-columns:1fr_1.15fr] bg-ink text-white rounded-[10px] overflow-hidden max-[900px]:[grid-template-columns:1fr_1fr] max-[650px]:[grid-template-columns:1fr]">
       <div className="p-[42px] max-[900px]:p-[30px] max-[650px]:p-[30px]">

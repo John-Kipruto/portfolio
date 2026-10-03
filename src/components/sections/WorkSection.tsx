@@ -8,7 +8,9 @@ import CaseStudyDialog from "../ui/CaseStudyDialog";
 import BillingDemoDialog from "../ui/BillingDemoDialog";
 
 export default function WorkSection() {
-  const [activeCase, setActiveCase] = useState(null);
+  const [activeCase, setActiveCase] = useState(
+    null as null | keyof typeof import("@/data/portfolio").caseStudies,
+  );
   const [demoOpen, setDemoOpen] = useState(false);
   return (
     <>
@@ -46,10 +48,12 @@ export default function WorkSection() {
           />
         </div>
       </section>
-      <CaseStudyDialog
-        projectId={activeCase}
-        onClose={() => setActiveCase(null)}
-      />
+      {activeCase && (
+        <CaseStudyDialog
+          projectId={activeCase}
+          onClose={() => setActiveCase(null)}
+        />
+      )}
       <BillingDemoDialog open={demoOpen} onClose={() => setDemoOpen(false)} />
     </>
   );

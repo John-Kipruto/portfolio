@@ -1,7 +1,12 @@
 import Link from "next/link";
 import MobilePreview from "./MobilePreview";
 
-export default function FoodiProject({ onCaseStudy }) {
+interface FoodiProjectProps {
+  onCaseStudy: any;
+  onOpenDemo?: any;
+}
+
+export default function FoodiProject({ onCaseStudy }: FoodiProjectProps) {
   return (
     <article className="border border-line rounded-[9px] overflow-hidden">
       <MobilePreview />

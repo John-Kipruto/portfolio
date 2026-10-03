@@ -1,7 +1,15 @@
 import Link from "next/link";
 import BillingPreview from "./BillingPreview";
 
-export default function OpsDeskProject({ onCaseStudy, onOpenDemo }) {
+interface OpsDeskProjectProps {
+  onCaseStudy: any;
+  onOpenDemo?: any;
+}
+
+export default function OpsDeskProject({
+  onCaseStudy,
+  onOpenDemo,
+}: OpsDeskProjectProps) {
   return (
     <article className="border border-line rounded-[9px] overflow-hidden">
       <BillingPreview />

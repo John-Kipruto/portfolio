@@ -2,8 +2,22 @@
 
 import { useEffect, useRef } from "react";
 
-export default function Modal({ open, onClose, titleId, label, children }) {
-  const dialogRef = useRef(null);
+interface ModalProps {
+  open: boolean;
+  onClose: () => void;
+  titleId: string;
+  label: string;
+  children: React.ReactNode;
+}
+
+export default function Modal({
+  open,
+  onClose,
+  titleId,
+  label,
+  children,
+}: ModalProps) {
+  const dialogRef = useRef({} as HTMLDialogElement);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -24,7 +38,7 @@ export default function Modal({ open, onClose, titleId, label, children }) {
     };
   }, [open]);
 
-  function closeOnBackdrop(event) {
+  function closeOnBackdrop(event: React.MouseEvent<HTMLDialogElement>) {
     if (event.target !== event.currentTarget) return;
     const rect = event.currentTarget.getBoundingClientRect();
     if (

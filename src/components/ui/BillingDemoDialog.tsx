@@ -9,7 +9,15 @@ import {
   getOutstanding,
 } from "@/data/invoices";
 
-export default function BillingDemoDialog({ open, onClose }) {
+interface BillingDemoDialogInterface {
+  open: boolean;
+  onClose: () => void;
+}
+
+export default function BillingDemoDialog({
+  open,
+  onClose,
+}: BillingDemoDialogInterface) {
   const [invoices, setInvoices] = useState(() =>
     sampleInvoices.map((invoice) => ({ ...invoice })),
   );
@@ -22,7 +30,7 @@ export default function BillingDemoDialog({ open, onClose }) {
     (invoice) => filter === "all" || invoice.status === filter,
   );
 
-  function markPaid(id) {
+  function markPaid(id: any) {
     setInvoices((current) =>
       current.map((invoice) =>
         invoice.id === id ? { ...invoice, status: "Paid" } : invoice,
