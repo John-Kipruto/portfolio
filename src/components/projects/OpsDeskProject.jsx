@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BillingPreview from "./BillingPreview";
 
 export default function OpsDeskProject({ onCaseStudy, onOpenDemo }) {
@@ -15,31 +16,46 @@ export default function OpsDeskProject({ onCaseStudy, onOpenDemo }) {
         <p className="text-muted m-0">
           A business workspace for teams, billing, and background workflows.
         </p>
-        <div className="flex flex-wrap gap-[7px] my-[25px] mx-[0]">
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            Next.js
-          </span>
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            NestJS
-          </span>
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            PostgreSQL
-          </span>
+        <div className="flex flex-wrap gap-[7px] my-[25px] mx-[0] items-center text-sm">
+          <span>Next.js</span>
+          <span>|</span>
+          <span>NestJS</span>
+          <span>|</span>
+          <span>PostgreSQL</span>
         </div>
-        <div className="flex justify-between border-t border-line pt-[20px] mt-[20px]">
-          <button
-            className="hover:underline hover:underline-offset-[5px] border-0 bg-transparent p-0 text-[14px] font-semibold text-left"
-            id="demo-open"
-            onClick={onOpenDemo}
-          >
-            Try billing demo
-          </button>
-          <button
-            className="hover:underline hover:underline-offset-[5px] border-0 bg-transparent p-0 text-[14px] font-semibold text-left"
-            onClick={() => onCaseStudy("ops")}
-          >
-            Technical brief
-          </button>
+        <div className="flex justify-between border-t border-line pt-[20px] mt-[20px] text-sm">
+          <div className="flex gap-2">
+            <button
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+              id="demo-open"
+              onClick={onOpenDemo}
+            >
+              Try billing demo
+            </button>
+            <button
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+              onClick={() => onCaseStudy("ops")}
+            >
+              Technical brief
+            </button>
+          </div>
+
+          <div className="flex gap-2">
+            <Link
+              href={""}
+              target="_blank"
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+            >
+              Github
+            </Link>
+            <Link
+              href={""}
+              target="_blank"
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+            >
+              Live
+            </Link>
+          </div>
         </div>
       </div>
     </article>

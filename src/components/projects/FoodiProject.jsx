@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MobilePreview from "./MobilePreview";
 
 export default function FoodiProject({ onCaseStudy }) {
@@ -16,24 +17,37 @@ export default function FoodiProject({ onCaseStudy }) {
           A food discovery and ordering experience built with React Native and
           Expo.
         </p>
-        <div className="flex flex-wrap gap-[7px] my-[25px] mx-[0]">
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            React Native
-          </span>
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            Expo
-          </span>
-          <span className="py-[4px] px-[10px] border border-[#d4dcd2] rounded-[4px] text-[12px]">
-            Expo Router
-          </span>
+        <div className="flex flex-wrap gap-[7px] my-[25px] mx-[0] items-center text-sm">
+          <span>React Native</span>
+          <span>|</span>
+          <span>Expo</span>
+          <span>|</span>
+          <span>Expo Router</span>
         </div>
         <div className="flex justify-between border-t border-line pt-[20px] mt-[20px]">
           <button
-            className="hover:underline hover:underline-offset-[5px] border-0 bg-transparent p-0 text-[14px] font-semibold text-left"
+            className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
             onClick={() => onCaseStudy("foodi")}
           >
-            Explore the project
+            Technical brief
           </button>
+
+          <div className="flex gap-2">
+            <Link
+              href={""}
+              target="_blank"
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+            >
+              Github
+            </Link>
+            <Link
+              href={""}
+              target="_blank"
+              className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
+            >
+              Live
+            </Link>
+          </div>
         </div>
       </div>
     </article>

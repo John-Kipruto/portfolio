@@ -8,14 +8,17 @@ export default function HeroSection() {
         </span>
       </div>
       <h1 className="font-heading font-medium tracking-[-5px] leading-[1.12] text-[clamp(50px,6.6vw,90px)] mt-[34px] mx-[0] mb-[35px] min-[1500px]:text-[94px] max-[650px]:text-[48px] max-[650px]:tracking-[-2.8px] max-[650px]:my-[32px] max-[650px]:mx-[0]">
-        Complex problems.
+        Full-stack TypeScript Engineer.
         <br />
-        <span className="text-[#65705f]">Thoughtful software.</span>
+        <span className="text-[#65705f]">
+          Building reliable web and mobile products.
+        </span>
       </h1>
       <div className="flex justify-between items-center gap-[40px] max-[900px]:items-start max-[900px]:flex-col max-[900px]:gap-[25px]">
         <p className="max-w-[540px] text-[18px] m-0 max-[650px]:text-[16px]">
-          I build the systems behind useful products — from corporate compliance
-          workflows to reliable APIs and intuitive web experiences.
+          I build production applications across React, Next.js, NestJS,
+          Node.js, PostgreSQL, and React Native, with a focus on backend
+          systems, APIs, business workflows, and product experiences.
         </p>
         <div className="flex items-center gap-[26px] max-[650px]:gap-[23px]">
           <a
@@ -25,10 +28,11 @@ export default function HeroSection() {
             Explore my work
           </a>
           <a
-            className="hover:underline hover:underline-offset-[5px] border-0 bg-transparent p-0 text-[14px] font-semibold text-left"
-            href="#about"
+            className="inline-flex items-center justify-center py-[13px] px-[23px] text-[14px] font-semibold border border-gray-400 rounded-[5px] whitespace-nowrap [transition:background_.2s,transform_.2s] hover:-translate-y-0.5 "
+            href="/John_Kipruto_Resume.pdf"
+            download="John_Kipruto_Resume.pdf"
           >
-            Meet the engineer
+            Download Resume
           </a>
         </div>
       </div>
