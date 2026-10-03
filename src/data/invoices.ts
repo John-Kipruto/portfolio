@@ -10,10 +10,10 @@ export const invoiceFilters = [
   { value: "Paid", label: "Paid" },
 ];
 
-export function formatMoney(amount) {
-  return `KSh ${amount.toLocaleString("en-KE")}`;
+export function formatMoney(amount: number | string): string {
+  return `KSh ${typeof amount === "number" ? amount.toLocaleString("en-KE") : amount}`;
 }
-export function getOutstanding(invoices) {
+export function getOutstanding(invoices: typeof sampleInvoices): number {
   return invoices.reduce(
     (total, invoice) =>
       total + (invoice.status === "Pending" ? invoice.amount : 0),
