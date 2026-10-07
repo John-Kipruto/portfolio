@@ -39,14 +39,14 @@ export default function FoodiProject({ onCaseStudy }: FoodiProjectProps) {
 
           <div className="flex gap-2">
             <Link
-              href={""}
+              href={"https://github.com/John-Kipruto"}
               target="_blank"
               className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
             >
               Github
             </Link>
             <Link
-              href={""}
+              href={"https://github.com/John-Kipruto"}
               target="_blank"
               className="border border-gray-300 p-2 rounded-md text-sm hover:bg-black hover:text-white  font-semibold text-left"
             >
