@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CompliancePreview from "./CompliancePreview";
 
 interface FeaturedProjectProps {
@@ -37,12 +38,20 @@ export default function FeaturedProject({
             MongoDB
           </span>
         </div>
-        <button
-          className="inline-flex items-center justify-center py-[13px] px-[23px] text-[14px] font-semibold border border-[transparent] rounded-[5px] whitespace-nowrap [transition:background_.2s,transform_.2s] hover:-translate-y-0.5 bg-lime text-ink"
-          onClick={() => onCaseStudy("sfl")}
-        >
-          Read case study
-        </button>
+        <div className="flex gap-[12px] max-[650px]:flex-col">
+          <button
+            className="inline-flex items-center justify-center py-[13px] px-[23px] text-[14px] font-semibold border border-[transparent] rounded-[5px] whitespace-nowrap [transition:background_.2s,transform_.2s] hover:-translate-y-0.5 bg-lime text-ink"
+            onClick={() => onCaseStudy("sfl")}
+          >
+            Read case study
+          </button>
+          <Link href="https://www.preview.simpleformations.ke/" target="_blank">
+            <button className="inline-flex items-center justify-center py-[13px] px-[23px] text-[14px] font-semibold border border-[transparent] rounded-[5px] whitespace-nowrap [transition:background_.2s,transform_.2s] hover:-translate-y-0.5 bg-lime text-ink">
+              View case study
+            </button>
+          </Link>
+        </div>
+
         <div className="[font:10px_monospace] tracking-[1px] mt-[32px] text-[#aab8b3] max-[650px]:mt-[24px]">
           FULL-STACK DEVELOPMENT / SFL
         </div>
